@@ -82,7 +82,14 @@ PinPoint.Widget.prototype = {
 		var contentNode = document.createElement("div");
 		var contentLink = document.createElement("a");
 
-
+		noteNode.className = "pinpoint-note";
+		timeAndDelteNode.className = "pinpoint-time-and-delete";
+		contentNode.className = 'pinpoint-content';
+		timeLink.setAttribute('class', 'pinpoint-timelink');
+		contentLink.setAttribute('class', 'pinpoint-contentlink');
+		timeLink.setAttribute('href', note.url + "#t=" + note.seconds);
+		contentLink.setAttribute('href', note.url + "#t=" + note.seconds);
+		
 
 	}
 
