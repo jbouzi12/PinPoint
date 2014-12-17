@@ -74,6 +74,18 @@ PinPoint.Widget.prototype = {
 		this.sideBar.appendChild(this.tableContainer);
 	},
 
+	drawNotes: function(note, index, url, refreshFunc) {
+		var noteNode = document.createElement("div");
+		var timeAndDelteNode = document.createElement("div");
+		var timeLink = document.createElement("a");
+		var deleteLink = document.createElement("button");
+		var contentNode = document.createElement("div");
+		var contentLink = document.createElement("a");
+
+
+
+	}
+
 	createNote: function(event){
     event.preventDefault();
 		var noteContentFromForm = this.input.value;
