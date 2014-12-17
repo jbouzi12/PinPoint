@@ -108,7 +108,17 @@ PinPoint.Widget.prototype = {
 		deleteLink.setAttribute('href', "#");
 		deleteLink.setAttribute('data-seconds', note.seconds);
 		deleteLink.innerHTML = "x";
-
+		deleteLink.addEventListener('click', function() {
+			chrome.runtime.sendMessage({
+				method: "remove note",
+				url: url,
+				index: index,
+				seconds: note.seconds,
+			}, refreshFunc) 
+		});
+		return noteNode;
+		
+		})
 	}
 
 	createNote: function(event){
