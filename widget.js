@@ -117,27 +117,25 @@ PinPoint.Widget.prototype = {
 			}, refreshFunc) 
 		});
 		return noteNode;
-		
-		})
-	}
+		},
 
-	createNote: function(event){
-    event.preventDefault();
+	createNote: function(event) {
+	    event.preventDefault();
 		var noteContentFromForm = this.input.value;
-    var time = document.getElementsByClassName('ytp-time-current')[0].innerHTML
-    var note = {
-      title: document.title,
-      noteTime: time,
-      content: noteContentFromForm,
-      seconds: this.video.currentTime,
-      url: this.getUrl()
-    };
-    chrome.runtime.sendMessage({
-    	method: "add note",
-    	url: this.getUrl(),
-    	note: note
-    }, this.appendNotes.bind(this));
-    this.input.value = "";
+	    var time = document.getElementsByClassName('ytp-time-current')[0].innerHTML
+	    var note = {
+	      title: document.title,
+	      noteTime: time,
+	      content: noteContentFromForm,
+	      seconds: this.video.currentTime,
+	      url: this.getUrl()
+	    };
+	    chrome.runtime.sendMessage({
+	    	method: "add note",
+	    	url: this.getUrl(),
+	    	note: note
+	    }, this.appendNotes.bind(this));
+	    this.input.value = "";
 	},
 
 	displayNotes: function(notes){
@@ -158,7 +156,7 @@ PinPoint.Widget.prototype = {
 		  	// 	this.appendNotes.bind(this)).present();
 		  	// 	index++;
 		 		// this.tableContainer.appendChild(node);
-			this.drawNotes(note, index, this.getUrl(), this.appendNotes.bind(this));
+			var node = this.drawNotes(note, index, this.getUrl(), this.appendNotes.bind(this));
 			index++;
 			this.tableContainer.appendChild(node);
 			}
