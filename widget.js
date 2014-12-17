@@ -103,6 +103,7 @@ PinPoint.Widget.prototype = {
 	  	this.tableContainer.innerHTML = ""
 			var index = 0;
 			for (note of notes) {
+				// NOTE PRESENTER HERE!!!!!!!!!!! 
 		  	var node = new PinPoint.NotePresenter(
 		  		note,
 		  		index,
