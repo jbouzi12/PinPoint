@@ -96,6 +96,13 @@ PinPoint.Widget.prototype = {
 		timeLink.setAttribute('href', note.url + "#t=" + note.seconds);
 		contentLink.setAttribute('href', note.url + "#t=" + note.seconds);
 
+		timeLink.innerHTML = note.noteTime;
+		contentLink.innerHTML = note.content;
+		timeAndDelteNode.appendChild(deleteLink);
+		timeAndDelteNode.appendChild(timeLink);
+		contentNode.appendChild(contentLink);
+		noteNode.appendChild(contentNode);
+		noteNode.appendChild(timeAndDelteNode);
 
 	}
 
