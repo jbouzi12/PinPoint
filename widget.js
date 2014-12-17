@@ -75,10 +75,16 @@ PinPoint.Widget.prototype = {
 	},
 
 	drawNotes: function(note, index, url, refreshFunc) {
+	    // Creates a 'div' node that represents a note
 		var noteNode = document.createElement("div");
+	    // Creates a 'div' node that represents the time and delete button in the note - when var is included, errors are thrown for some reason.
 		var timeAndDelteNode = document.createElement("div");
+	    // Creates an 'a' node to link to a point in the video - when var is included, errors are thrown for some reason.
 		var timeLink = document.createElement("a");
+	    //Creates delete link
+	    // deleteNode = document.createElement(this.childNodeType);
 		var deleteLink = document.createElement("button");
+	    //Creates content div & link
 		var contentNode = document.createElement("div");
 		var contentLink = document.createElement("a");
 
@@ -89,7 +95,7 @@ PinPoint.Widget.prototype = {
 		contentLink.setAttribute('class', 'pinpoint-contentlink');
 		timeLink.setAttribute('href', note.url + "#t=" + note.seconds);
 		contentLink.setAttribute('href', note.url + "#t=" + note.seconds);
-		
+
 
 	}
 
