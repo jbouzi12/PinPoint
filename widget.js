@@ -104,6 +104,11 @@ PinPoint.Widget.prototype = {
 		noteNode.appendChild(contentNode);
 		noteNode.appendChild(timeAndDelteNode);
 
+		deleteLink.setAttribute('class', 'pinpoint-delete');
+		deleteLink.setAttribute('href', "#");
+		deleteLink.setAttribute('data-seconds', note.seconds);
+		deleteLink.innerHTML = "x";
+
 	}
 
 	createNote: function(event){
