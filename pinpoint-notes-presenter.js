@@ -1,3 +1,5 @@
+var PinPoint = PinPoint || {};
+
 PinPoint.NotePresenter = function(note, index, url, refreshFunc) {
   this.note = note;
 
